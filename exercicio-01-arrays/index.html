@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./assets/index.css">
+<title>Lista de Tarefas - RM550301</title>
+</head>
+<body>
+    <!-- Título principal da página -->
+    <h1>Tarefas</h1>
+    <!-- Formulário para adicionar tarefas -->
+    <form id="taskForm">
+        <input type="text" id="descriptionInput" placeholder="Descrição" required>
+        <input type="text" id="authorInput" placeholder="Autor" required>
+        <input type="text" id="departmentInput" placeholder="Departamento" required>
+        <!-- Dropdown para selecionar a importância -->
+        <select id="importanceInput">
+            <option value="alta">Alta</option>
+            <option value="média">Média</option>
+            <option value="baixa">Baixa</option>
+        </select>
+        <input type="text" id="valueInput" placeholder="Valor">
+        <input type="text" id="durationInput" placeholder="Duração">
+        <button type="submit">Adicionar</button>
+    </form>
+    <!-- Botão para limpar tarefas concluídas -->
+    <button id="clearCompleted">Limpar Concluídas</button>
+    <!-- Subtítulo para a lista de tarefas importantes -->
+    <h2>Lista por Ordem de Importância (Descrição)</h2>
+    <!-- Lista não ordenada para tarefas importantes -->
+    <ul id="importantTasks"></ul>
+    <!-- Subtítulo para a lista de todas as tarefas -->
+    <h2>Lista de Tarefas</h2>
+     <!-- Tabela para exibir a lista de tarefas -->
+    <table id="taskList">
+    <!-- Cabeçalho da tabela -->
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Autor</th>
+                <th>Departamento</th>
+                <th>Importância</th>
+                <th>Valor</th>
+                <th>Duração</th>
+                <th>Ações</th>
+             </tr>
+        </thead>
+        <!-- Corpo da tabela (será preenchido dinamicamente) -->
+        <tbody></tbody>
+    </table>
+
+  <script src="./assets/index.js"></script>
+</body>
+</html>
